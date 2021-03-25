@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true">
+	<appender name="STDOUT"
+		class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} |%-4relative | [%thread] | %-5level
+				|%logger{35} |%msg%n |%rEx</pattern>
+		</encoder>
+	</appender>
+	<!-- DEV -->
+	<property name="LOG_FILE" value="D://CMS//API" />
+	<property name="LOG PATTERN"
+		value="[%X{RemoteAddress} --%X{UUID}] [%d{dd:MM:yyyy} %d{HH:mm:ss.SSS}] [%-5p] [%C - %M : %L] - %m%n" />
+
+
+
+
+	 <!---View PIN API Loggers Starts <appender name="ViewPinAPIINFO" class="ch.qos.logback.core.rolling.RollingFileAppender"> 
+		<file>${LOG_FILE}/ViewPinAPI/ViewPinAPIInfo.log</file> <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy"> 
+		<fileNamePattern>${LOG_FILE}/ViewPinAPI/ViewPinAPIInfo.%i.log.zip </fileNamePattern> 
+		<minIndex>1</minIndex> <maxIndex>100</maxIndex> </rollingPolicy> <triggeringPolicy 
+		class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy"> <maxFileSize>20MB</maxFileSize> 
+		</triggeringPolicy> <encoder> <pattern>${LOG PATTERN}</pattern> </encoder> 
+		<filter class="ch.qos.logback.classic.filter.LevelFilter"> <level>INFO</level> 
+		<onMatch>ACCEPT</onMatch> <onMismatch>DENY</onMismatch> </filter> </appender> 
+		<appender name="ViewPinAPIDEBUG" class="ch.qos.logback.core.rolling.RollingFileAppender"> 
+		<file>${LOG_FILE}/ViewPinAPI/ViewPinAPIDebug.log</file> <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy"> 
+		<fileNamePattern>${LOG_FILE}/ViewPinAPI/ViewPinAPIDebug.%i.log.zip </fileNamePattern> 
+		<minIndex>1</minIndex> <maxIndex>100</maxIndex> </rollingPolicy> <triggeringPolicy 
+		class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy"> <maxFileSize>20MB</maxFileSize> 
+		</triggeringPolicy> <encoder> <pattern>${LOG PATTERN}</pattern> </encoder> 
+		<filter class="ch.qos.logback.classic.filter.LevelFilter"> <level>DEBUG</level> 
+		<onMatch>ACCEPT</onMatch> <onMismatch>DENY</onMismatch> </filter> </appender> 
+		<appender name="ViewPinAPIERROR" class="ch.qos.logback.core.rolling.RollingFileAppender"> 
+		<file>${LOG_FILE}/ViewPinAPI/ViewPinAPIError.log</file> <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy"> 
+		<fileNamePattern>${LOG_FILE}/ViewPinAPI/ViewPinAPIError.%i.log.zip </fileNamePattern> 
+		<minIndex>1</minIndex> <maxIndex>100</maxIndex> </rollingPolicy> <triggeringPolicy 
+		class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy"> <maxFileSize>20MB</maxFileSize> 
+		</triggeringPolicy> <encoder> <pattern>${LOG PATTERN}</pattern> </encoder> 
+		<filter class="ch.qos.logback.classic.filter.LevelFilter"> <level>ERROR</level> 
+		<onMatch>ACCEPT</onMatch> <onMismatch>DENY</onMismatch> </filter> </appender> 
+		<logger name="com.fss.cms.api.viewpin" level="info" additivity="false"> <appender-ref 
+		ref="ViewPinAPIINFO" /> </logger> <logger name="com.fss.cms.api.viewpin" 
+		level="error" additivity="false"> <appender-ref ref="ViewPinAPIERROR" /> 
+		</logger> <logger name="com.fss.cms.api.viewpin" level="debug" additivity="false"> 
+		<appender-ref ref="ViewPinAPIDEBUG" /> </logger> View PIN API Logger Ends -->
+	<root level="debug">
+		<appender-ref ref="STDOUT" />
+	</root>
+</configuration>
