@@ -11,7 +11,6 @@ public class DBRoutingConfig extends AbstractRoutingDataSource {
 
 	@Override
 	protected Object determineCurrentLookupKey() {
-		// TODO Auto-generated method stub
 		return DBContextLoader.getSchemaType().getValue();
 	}
 

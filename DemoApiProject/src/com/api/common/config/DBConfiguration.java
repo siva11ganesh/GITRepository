@@ -28,14 +28,14 @@ public class DBConfiguration {
 	public DataSource myDataSource() throws Exception {
 		if (!jndiEnable.equalsIgnoreCase(env.getProperty("jndi.Enable"))) {
 			DriverManagerDataSource dataSource = new DriverManagerDataSource();
-			dataSource.setDriverClassName(null);
-			dataSource.setUrl(null);
-			dataSource.setUsername(null);
-			dataSource.setPassword(null);
+			dataSource.setDriverClassName(env.getProperty("spring.datasource.driver-class-name"));
+			dataSource.setUrl(env.getProperty("spring.datasource.url"));
+			dataSource.setUsername(env.getProperty("username"));
+			dataSource.setPassword(env.getProperty("password"));
 			return dataSource;
 		} else {
 			JndiObjectFactoryBean jndiBean = new JndiObjectFactoryBean();
-			jndiBean.setJndiName(null);
+			jndiBean.setJndiName(env.getProperty("dbjndi"));
 			try {
 				jndiBean.afterPropertiesSet();
 			} catch (Exception e) {

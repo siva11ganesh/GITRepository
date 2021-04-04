@@ -13,5 +13,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="F:/GITRepository/lombok-1.18.18.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
