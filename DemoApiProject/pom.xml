@@ -170,17 +170,6 @@
 		</dependency>
 	</dependencies>
 	<profiles>
-		<profile>
-			<build>
-				<finalName>${project.artifactId}</finalName>
-				<plugins>
-					<plugin>
-						<groupId>org.springframework.boot</groupId>
-						<artifactId>spring-boot-maven-plugin</artifactId>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
 		<!-- <profile> <id>APIOracle</id> <dependencies> <dependency> <groupId>com.fss.cms.api.oracle</groupId> 
 			<artifactId>APIOracle</artifactId> <version>1.0</version> <scope>compile</scope> 
 			</dependency> <dependency> <groupId>com.oracle</groupId> <artifactId>ojdbc14</artifactId> 
