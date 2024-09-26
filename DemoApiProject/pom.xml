@@ -22,7 +22,7 @@
 		<json>20090211</json>
 		<ojdbc14>14</ojdbc14>
 		<postgres>9.3-1100-jdbc41</postgres>
-		<springfox-swagger-ui>2.9.2</springfox-swagger-ui>
+		<springfox-swagger-ui>2.10.0</springfox-swagger-ui>
 		<springfox-swagger2>2.9.2</springfox-swagger2>
 		<swagger-annotations>1.5.10</swagger-annotations>
 		<commons-codec>1.11</commons-codec>
